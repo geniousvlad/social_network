@@ -1,0 +1,23 @@
+.content {
+  grid-area: content;
+  background-color: lightskyblue;
+
+}
+
+.content img {
+  width: 800px;
+}
+
+.item {
+  color: white;
+}
+
+.item img {
+  width: 100px;
+  border-radius: 50px;
+}
+
+.like_count {
+  color: yellow;
+  font-weight: 500;
+}

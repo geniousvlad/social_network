@@ -1,0 +1,9 @@
+.nav {
+  grid-area: nav;
+  background-color: lightpink;
+
+}
+
+.item a {
+  color: white;
+}
