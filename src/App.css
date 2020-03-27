@@ -2,16 +2,27 @@
   margin: 0 auto;
   display: grid;
   width: 1200px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto auto;
+  grid-gap: 0.5em;
 
   grid-template-areas:
-      'header header'
-      'nav content'
+      'header header header header header header'
+      'nav content content content content content'
    ;
 
-  grid-template-rows: 60px 1fr;
-  grid-template-columns: 2fr 10fr;
-  grid-gap: 0.5em;
-  /* grid-gap: 10px; */
+}
+
+.header {
+  grid-area: h;
+}
+
+.nav {
+  grid-area: n;
+}
+
+.content {
+  grid-area: c;
 }
 
 .app-wrapper-content {  
