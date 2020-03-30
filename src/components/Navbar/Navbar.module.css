@@ -1,5 +1,5 @@
 .nav {
-  grid-area: nav;
+  grid-area: n;
   background-color: lightpink;
   padding: 20px;
   line-height: 30px;
@@ -12,6 +12,6 @@
 }
 
 .item a.activeLink {
-  color: lightskyblue;
+  color: lightslategray;
   font-weight: 600;
 }
