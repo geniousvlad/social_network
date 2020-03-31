@@ -1,13 +1,7 @@
-/* .content {
-  grid-area: content;
-  background-color: lightskyblue;
-
+.postsBlock {
+  padding: 10px;
 }
 
-.content img {
-  width: 800px;
+.posts {
+  margin-top: 10px;
 }
-
-.item {
-  color: white;
-} */
