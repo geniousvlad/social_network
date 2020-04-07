@@ -1,6 +1,5 @@
-import {rerenderEntireTree} from '../render';
-
-    let state = {
+let store = {
+    _state: {
         profilePage: {
             posts: [
                 {id: 1, message: 'Hi, how are you?', likesCount: 17},
@@ -26,23 +25,35 @@ import {rerenderEntireTree} from '../render';
             ]
         }        
         
-    }
+    },
+    _callSubscriber () {
+        console.log('State is changed');
+    },
 
-    window.state = state;
+    getState(){
+        return this._state;
+    },
+    subscribe (observer) {
+        this._callSubscriber = observer;
+    },
 
-    export let addPost = () => {
-        let newPost = {
-            id: 6,
-            message: state.profilePage.newPostText,
-            likesCount: 0
-        };
-        state.profilePage.posts.push(newPost);
-        state.profilePage.newPostText = '';
-        rerenderEntireTree(state);
+    dispatch (action) {
+        if (action.type === 'ADD-POST') {
+            let newPost = {
+                id: 6,
+                message: this._state.profilePage.newPostText,
+                likesCount: 0
+            };
+            this._state.profilePage.posts.push(newPost);
+            this._state.profilePage.newPostText = '';
+            this._callSubscriber(this._state);            
+        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+            this._state.profilePage.newPostText = action.newText;
+            this._callSubscriber(this._state);
+        }
     }
-    export let updateNewPostText = (newText) => {
-        state.profilePage.newPostText = newText;
-        rerenderEntireTree(state);
-    }
+}
 
-    export default state;
+
+export default store;
+window.store = store;
