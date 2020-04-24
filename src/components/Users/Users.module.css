@@ -1,3 +1,7 @@
 .userPhoto {
     max-width: 120px;
 }
+
+.selectedPage {
+    font-weight: bold;
+}
