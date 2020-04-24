@@ -5,3 +5,7 @@
 .selectedPage {
     font-weight: bold;
 }
+
+.preloaderPic {
+    max-width: 120px;
+}
