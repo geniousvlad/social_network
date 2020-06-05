@@ -2,8 +2,6 @@ import React from 'react';
 import s from './Users.module.css';
 import noUser from '../../assets/images/no_user.png';
 import { NavLink } from 'react-router-dom';
-import * as axios from 'axios';
-import { usersAPI } from '../../api/api';
 
 
 let Users = (props) => {
