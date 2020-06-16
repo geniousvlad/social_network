@@ -1,5 +1,4 @@
 import React from 'react';
-import s from './ProfileInfo.module.css';
 
 
 class ProfileStatus extends React.Component {
@@ -36,11 +35,9 @@ class ProfileStatus extends React.Component {
         });
     }
 
-        console.log('componentDidUpdate')
     }
 
     render() {
-        console.log('render');
         return (
             <div>
                 {!this.state.editMode &&

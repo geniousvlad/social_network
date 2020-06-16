@@ -1,11 +1,13 @@
-/* .userPhoto {
-    max-width: 120px;
-} */
-
-.selectedPage {
-    font-weight: bold;
+.paginator {
+    margin: 10px;
 }
 
-/* .preloaderPic {
-    max-width: 120px;
-} */
+.pageNumber {
+    padding: 2px;
+    border: 1px solid grey;
+}
+
+.pageNumber.selectedPage {
+    font-weight: bold;
+    border-color: black;
+}
