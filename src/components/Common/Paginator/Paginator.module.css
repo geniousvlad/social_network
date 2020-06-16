@@ -4,10 +4,11 @@
 
 .pageNumber {
     padding: 2px;
-    border: 1px solid grey;
+    border: 1px solid white;
+    margin: 1px;
 }
 
 .pageNumber.selectedPage {
     font-weight: bold;
-    border-color: black;
+    border-color: lightseagreen;
 }
