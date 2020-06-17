@@ -15,3 +15,7 @@
     color: red;
     font-weight: 700;
 }
+
+.captchaImg {
+    max-width: 200px;
+}
